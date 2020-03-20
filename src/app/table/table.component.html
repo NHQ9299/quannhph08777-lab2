@@ -1,0 +1,27 @@
+<h2>Manager Product</h2>
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Product Name</th>
+			<th>Price</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+  <tr *ngFor="let product of products"> 
+    <td>{{product.id}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+    <td>
+      <button (click)="remove(product.id)">Xóa</button>
+      <button (click)="show(product)">Chi tiết</button>
+    </td>
+  </tr>
+</table>
+
+<div class="ditail" *ngIf="chiTiet">
+  <app-chi-tiet [data]='chiTiet'></app-chi-tiet>
+<p>Tên sản phẩm: {{chiTiet.name}}</p>
+<p>Giá sản phẩm: {{chiTiet.price}}</p>
+<p>Mô tả: {{chiTiet.desc}}</p>
+</div>
