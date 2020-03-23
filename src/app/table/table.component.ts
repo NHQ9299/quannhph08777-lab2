@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {data} from '../data';
+import { SService } from '../services/product.service'
 import {Product} from '../Product';
 @Component({
   selector: 'app-table',
@@ -7,20 +7,21 @@ import {Product} from '../Product';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
-
-  constructor() { }
+products: Product[];
+  constructor(
+       private productService: SService
+  ) { }
 
   ngOnInit() {
+    this.products = this.productService.getProducts();
   }
-products = data;
-
-remove(id){
-  return this.products = this.products.filter(product => product.id != id);
-}
 
 chiTiet: Product;
 
 show(product){
 this.chiTiet = product;
 }
+removeItem(id){
+    this.products = this.productService.removeProduct(id);
+  }
 }

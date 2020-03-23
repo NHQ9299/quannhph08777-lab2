@@ -11,12 +11,15 @@ export class SService {
  getProducts(){
       return this.products;
   }
+  getProduct(id){
+    return this.products.find(product => product.id == id);
+  }
+
   removeProduct(id){
     return this.products = this.products.filter(product => product.id != id)
   }
   addProduct(product){
     this.products.push(product);
-    console.log(this.products)
 
   }
 
