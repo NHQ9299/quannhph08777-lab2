@@ -24,4 +24,7 @@ this.chiTiet = product;
 removeItem(id){
     this.products = this.productService.removeProduct(id);
   }
+editItem(id){
+  this.products = this.productService.editProduct(id);
+}
 }

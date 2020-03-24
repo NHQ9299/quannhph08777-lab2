@@ -8,6 +8,7 @@ import { ServiceComponent } from './service/service.component';
 import { ContactComponent } from './contact/contact.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ChiTietComponent } from './chi-tiet/chi-tiet.component';
+import { EditComponent } from './edit/edit.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path : 'contact', component : ContactComponent},
   { path: "product/add", component: AddProductComponent },
   { path: "product/detail/:id", component: ChiTietComponent },
+  {path : "product/edit/:id", component:EditComponent},
   { path: "404", component: NotFoundComponent},
   { path: "**", redirectTo: "404", pathMatch: "full" }
 ];

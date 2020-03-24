@@ -18,6 +18,7 @@ import { AboutComponent } from './about/about.component';
 import { ServiceComponent } from './service/service.component';
 import { ContactComponent } from './contact/contact.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { EditComponent } from './edit/edit.component';
 
 
 
@@ -25,7 +26,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,AppRoutingModule ],
-  declarations: [ AppComponent, HelloComponent, ProductComponent, ProductListComponent, CategoryComponent, SlideComponent, TableComponent, ChiTietComponent, AddProductComponent, HomeComponent, AboutComponent, ServiceComponent, ContactComponent, NotFoundComponent,   ],
+  declarations: [ AppComponent, HelloComponent, ProductComponent, ProductListComponent, CategoryComponent, SlideComponent, TableComponent, ChiTietComponent, AddProductComponent, HomeComponent, AboutComponent, ServiceComponent, ContactComponent, NotFoundComponent, EditComponent,   ],
   bootstrap:    [ AppComponent ],
   providers: [SService],
 })

@@ -23,5 +23,9 @@ export class SService {
 
   }
 
+  editProduct(id){
+    let a = this.products.find(product => product.id == id);
+  }
+
 
 }
