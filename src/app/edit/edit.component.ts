@@ -15,12 +15,15 @@ export class EditComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.editProduct();
   }
   editProduct(){
     this.activatedRoute.params.subscribe(param => {
       this.product = this.productService.getProduct(param.id);
-      console.log(param.id);
     });
+  }
+   addProduct(){
+    this.productService.addProducts();
   }
 
 }
